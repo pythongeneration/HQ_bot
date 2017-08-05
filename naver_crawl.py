@@ -18,7 +18,7 @@ def crawling_naver():
         tag_html = 'http://news.naver.com' + tag['href']
         # print(i,  tag['title']+tag_html)
         D[tag['title']] = tag_html
-    return print(D)
+    return D
 
 
 if __name__ == "__main__":
