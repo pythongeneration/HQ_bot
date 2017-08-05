@@ -18,7 +18,7 @@ def crawling_daum():
         tag_noline = tag.text.split()
         n_tag = " ".join(tag_noline)
         D[n_tag] = tag['href']
-    return print(D)
+    return D
 
 
 if __name__ == "__main__":
