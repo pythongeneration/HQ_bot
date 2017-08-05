@@ -1,0 +1,13 @@
+import requests
+
+from bs4 import BeautifulSoup as bsoup
+
+html = requests.get('http://news.naver.com').text
+
+soup = bsoup(html, 'html.parser')
+
+# print(soup)
+for i, tag in enumerate(soup.select('#ranking_105 a')):
+    i += 1
+    tag_noline = tag.text.split()
+    print(i,  tag['title'], 'http://news.naver.com' + tag['href'])
